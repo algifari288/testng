@@ -1,0 +1,66 @@
+# Semua nilai di bawah adalah DEFAULT awal. Ubah sesuai balancing server.
+
+ownership:
+  free-bots: 1            # bot gratis per pemain
+  max-bots: 5             # batas maksimum bot per pemain (gratis + beli)
+  extra-bot-price: 50000  # harga bot tambahan (dipakai Tahap 4 / ekonomi)
+
+server-limits:
+  max-active-bots: 20     # batas bot aktif bersamaan di seluruh server
+
+claim:
+  provider: redprotect    # redprotect | none
+  allow-wilderness: false # true = boleh bekerja di luar claim mana pun
+
+upgrades:
+  max-level: 10
+  cost-base: 5000         # biaya upgrade = cost-base * level ^ cost-growth
+  cost-growth: 1.6
+
+miner:
+  max-area-volume: 100000 # total blok maksimum area
+  max-side: 64            # sisi terpanjang maksimum
+  base-interval-ticks: 40 # level 1
+  min-interval-ticks: 8   # level 10
+  base-duration-minutes: 15
+  duration-per-level-minutes: 10
+  base-storage-slots: 18
+  storage-slots-per-level: 4
+  targets:
+    - COAL_ORE
+    - DEEPSLATE_COAL_ORE
+    - IRON_ORE
+    - DEEPSLATE_IRON_ORE
+    - COPPER_ORE
+    - DEEPSLATE_COPPER_ORE
+    - GOLD_ORE
+    - DEEPSLATE_GOLD_ORE
+    - REDSTONE_ORE
+    - DEEPSLATE_REDSTONE_ORE
+    - LAPIS_ORE
+    - DEEPSLATE_LAPIS_ORE
+    - DIAMOND_ORE
+    - DEEPSLATE_DIAMOND_ORE
+    - EMERALD_ORE
+    - DEEPSLATE_EMERALD_ORE
+
+builder:
+  max-schematic-blocks: 20000
+  base-interval-ticks: 20 # 1 blok per interval, level 1
+  min-interval-ticks: 2   # level 10
+  base-storage-slots: 27
+  storage-slots-per-level: 9
+  blocked-materials:
+    - COMMAND_BLOCK
+    - CHAIN_COMMAND_BLOCK
+    - REPEATING_COMMAND_BLOCK
+    - STRUCTURE_BLOCK
+    - JIGSAW
+    - BEDROCK
+    - BARRIER
+    - SPAWNER
+    - TNT
+
+performance:
+  autosave-seconds: 60
+  blocks-per-tick-budget: 20  # batas operasi dunia per tick untuk semua bot

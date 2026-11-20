@@ -1,0 +1,17 @@
+name: HiyuraBots
+version: '${version}'
+main: com.hiyura.bots.HiyuraBotsPlugin
+api-version: '26.2'
+authors: [HiyuraSMP]
+depend: [Citizens]
+softdepend: [RedProtect]
+commands:
+  bot:
+    description: Perintah utama HiyuraBots
+    usage: /bot <create|list|remove|reload|admin>
+    aliases: [hbot]
+permissions:
+  hiyurabots.use:
+    default: true
+  hiyurabots.admin:
+    default: op
